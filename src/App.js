@@ -9,22 +9,23 @@ import Home from "./Pages/Home";
 import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
+import Footer from "./Components/Footer";
 
 function App() {
   const [darkToggle, setDarkToggle] = useState(false);
   return (
     <div
-      className={`h-screen w-full flex-col text-gray-700 bg-[#fbfbf9] dark:bg-[#121212] dark:text-gray-100 ${
+      className={`h-full w-full flex-col text-gray-700 bg-purple-50 dark:bg-[#4C516D] dark:text-gray-100 ${
         darkToggle && "dark"
       }`}
     >
       <Router>
         <NavBar />
-        <main className="text-gray-700 bg-[#fbfbf9] dark:bg-[#121212] dark:text-gray-100 p-6 h-full">
-          <div className="inline text-gray-700 bg-[#fbfbf9] dark:bg-[#121212] dark:text-gray-100 relative left-[98%]">
+        <main className="text-gray-700 bg-purple-50 dark:bg-[#4C516D] dark:text-gray-100 p-6 h-full">
+          <div className="inline text-gray-700 bg-purple-50 dark:bg-[#4C516D] dark:text-gray-100 relative left-[95%]">
             <button
               onClick={() => setDarkToggle(!darkToggle)}
-              className="p-2 text-2xl bg-slate-200 text-purple-600 dark:bg-slate-700 rounded-lg"
+              className="p-2 text-2xl bg-slate-200 text-black dark:bg-slate-700 dark:text-white rounded-lg fixed"
             >
               {darkToggle ? <FaMoon /> : <BsSunFill />}
             </button>
@@ -38,6 +39,7 @@ function App() {
             <Route path="*" elememt={<Error />} />
           </Routes>
         </main>
+        <Footer />
       </Router>
     </div>
   );
