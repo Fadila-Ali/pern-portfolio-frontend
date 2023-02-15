@@ -65,7 +65,7 @@ function Reviews() {
         <h2 className="text-2xl font-bold pl-2">Item Reviews</h2>
       </div>
       <ReviewForm handleSubmit={handleAdd}>
-        <h3 class="font-bold">Add a New Review</h3>
+        <h3 class="font-bold">Add Your Review</h3>
       </ReviewForm>
       {reviews.map((review) => (
         <Review

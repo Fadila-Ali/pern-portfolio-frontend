@@ -113,7 +113,7 @@ export default function Footer() {
             </form>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col items-center p-2">
           <h3 className="font-bold pr-2">Quick Links:</h3>
           <ul className="text-gray-400">
             {navLinks.map(({ id, name, path }) => (

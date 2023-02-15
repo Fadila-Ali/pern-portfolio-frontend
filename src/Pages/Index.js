@@ -6,7 +6,7 @@ export default function Index() {
   return (
     <div>
       <Items />
-      <Ads/>
+      <Ads />
     </div>
   );
 }

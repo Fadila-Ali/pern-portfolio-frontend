@@ -6,7 +6,9 @@ import { FcLikePlaceholder, FcLike } from "react-icons/fc";
 import { RiShoppingBag3Line } from "react-icons/ri";
 import { MdExposurePlus1 } from "react-icons/md";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
+import { BiArrowBack } from "react-icons/bi";
 import Reviews from "./Reviews";
+import EditItem from "./EditItem";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -55,6 +57,9 @@ export default function ItemDetails() {
 
   return (
     <article className="sm:flex flex-col">
+      <Link to={`/items`} className="hover:text-pink-500">
+        <BiArrowBack size={25} />
+      </Link>
       <div className="flex">
         <div className="flex justify-start">
           <img
@@ -99,7 +104,7 @@ export default function ItemDetails() {
             {item.is_favorite ? (
               <p className="">
                 <span>Favorite</span>
-                <FcLike className="" />
+                <FcLike className="inline text-5xl m-1" />
               </p>
             ) : (
               <p>
@@ -142,6 +147,9 @@ export default function ItemDetails() {
           </div>
         </div>
       </div>
+      <div className="ms-auto">
+        <EditItem />
+      </div>
       <br />
       <h2 className="text-2xl font-bold pl-2">You may also like these!</h2>
       <hr />
@@ -150,13 +158,13 @@ export default function ItemDetails() {
           if (el.category.includes(item.category) && el.id !== item.id) {
             return (
               <div key={el.id} className="p-2 w-50 h-50 my-2 mx-4">
-                <Link to={`/items/${item.id}`}>
+                <Link to={`/items/${el.id}`}>
                   <img
                     src={el.image}
                     className="object-contain w-40 h-44"
                   ></img>
                 </Link>
-                <Link to={`/items/${item.id}`}>
+                <Link to={`/items/${el.id}`}>
                   <h2 className="w-40 break-normal truncate">{el.name}</h2>
                 </Link>
                 <div className="flex justify-between">

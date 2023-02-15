@@ -42,7 +42,7 @@ function ReviewForm(props) {
       {props.children}
       <form class="px-10 pt-6 pb-8 mb-4 w-[80%]" onSubmit={handleSubmit}>
         <input
-          class="inline bg-white dark:bg-black shadow appearance-none rounded w-full py-2 px-3 my-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="inline bg-white dark:bg-black shadow-md appearance-none rounded w-full py-2 px-3 my-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="reviewer"
           value={review.reviewer}
           type="text"
@@ -51,7 +51,7 @@ function ReviewForm(props) {
           required
         />
         <input
-          class="bg-white dark:bg-black shadow appearance-none rounded w-full py-2 px-3 my-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="bg-white dark:bg-black shadow-md appearance-none rounded w-full py-2 px-3 my-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="title"
           type="text"
           required
@@ -60,7 +60,7 @@ function ReviewForm(props) {
           placeholder="Title"
         />
         <input
-          class=" bg-white dark:bg-black shadow appearance-none rounded w-full py-2 px-3 my-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class=" bg-white dark:bg-black shadow-md appearance-none rounded w-full py-2 px-3 my-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="rating"
           type="number"
           name="rating"
@@ -72,7 +72,7 @@ function ReviewForm(props) {
           placeholder="Rating(1 to 5)"
         />
         <textarea
-          class="bg-white dark:bg-black shadow appearance-none rounded w-full py-2 px-3 my-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          class="bg-white dark:bg-black shadow-md appearance-none rounded w-full py-2 px-3 my-1 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="content"
           type="text"
           name="content"
@@ -81,7 +81,7 @@ function ReviewForm(props) {
           onChange={handleTextChange}
         />
         <button
-          class="block border border-gray-500 font-bold hover:bg-pink-500 hover:border-none text-slace-900 py-2 px-4 rounded"
+          class="block border border-gray-500 mx-auto font-bold hover:bg-pink-500 hover:border-none text-slace-900 py-2 px-4 rounded"
           type="submit"
         >
           Submit

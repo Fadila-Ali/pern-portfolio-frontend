@@ -20,7 +20,7 @@ export default function Review({ review, handleDelete, handleSubmit }) {
           toggleView={toggleView}
         />
       ) : (
-        <div class="bg-[#ffffff32] dark:bg-[#00000032] shadow w-[60%] flex flex-col justify-center p-4 m-4 rounded">
+        <div class="bg-[#ffffffed] dark:bg-[#00000032] shadow-lg w-[60%] flex flex-col justify-center p-4 m-4 rounded">
           <div className="flex justify-between">
             <h2 className="text-2xl font-bold">
               {reviewer} - <span className="text-xl">{title}</span>

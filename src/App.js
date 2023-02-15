@@ -10,6 +10,7 @@ import Index from "./Pages/Index";
 import New from "./Pages/New";
 import Show from "./Pages/Show";
 import Footer from "./Components/Footer";
+import Category from "./Pages/Category";
 
 function App() {
   const [darkToggle, setDarkToggle] = useState(false);
@@ -22,14 +23,12 @@ function App() {
       <Router>
         <NavBar />
         <main className="text-gray-700 bg-purple-50 dark:bg-[#4C516D] dark:text-gray-100 p-6 h-full">
-          <div className="inline text-gray-700 bg-purple-50 dark:bg-[#4C516D] dark:text-gray-100 relative left-[95%]">
             <button
               onClick={() => setDarkToggle(!darkToggle)}
-              className="p-2 text-2xl bg-slate-200 text-black dark:bg-slate-700 dark:text-white rounded-lg fixed"
+              className="relative left-[95%] p-2 text-2xl bg-slate-200 text-black dark:bg-slate-700 dark:text-white rounded-lg"
             >
               {darkToggle ? <FaMoon /> : <BsSunFill />}
             </button>
-          </div>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/items" element={<Index />} />
