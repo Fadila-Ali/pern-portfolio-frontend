@@ -50,7 +50,7 @@ export default function NewItem() {
   };
 
   return (
-    <div className="w-2/5 m-auto">
+    <div className="sm:w-full lg:w-2/5 m-auto p-1">
       <form
         className="bg-white text-slate-800 dark:text-slate-100 dark:bg-slate-900 shadow-md rounded px-10 pt-6 pb-8 mb-4"
         onSubmit={handleSubmit}
@@ -192,12 +192,12 @@ export default function NewItem() {
           <button
             type="submit"
             onClick={handleSubmit}
-            className="block border hover:bg-pink-500 hover:border-none text-slace-900 uppercase text-lg p-2 rounded"
+            className="block border hover:bg-pink-500 hover:border-pink-500 text-slace-900 uppercase text-lg p-2 rounded"
           >
             Submit
           </button>
           <Link to={`/items`}>
-            <button className="block border hover:bg-pink-500 hover:border-none text-slace-900 uppercase text-lg p-2 rounded">
+            <button className="block border hover:bg-pink-500 hover:border-pink-500 text-slace-900 uppercase text-lg p-2 rounded">
               Cancel
             </button>
           </Link>

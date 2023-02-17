@@ -60,7 +60,7 @@ export default function ItemDetails() {
       <Link to={`/items`} className="hover:text-pink-500">
         <BiArrowBack size={25} />
       </Link>
-      <div className="flex">
+      <div className="sm:flex">
         <div className="flex justify-start">
           <img
             src={item.image}
@@ -153,7 +153,7 @@ export default function ItemDetails() {
       <br />
       <h2 className="text-2xl font-bold pl-2">You may also like these!</h2>
       <hr />
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center gap-2">
         {related.map((el) => {
           if (el.category.includes(item.category) && el.id !== item.id) {
             return (
@@ -161,7 +161,7 @@ export default function ItemDetails() {
                 <Link to={`/items/${el.id}`}>
                   <img
                     src={el.image}
-                    className="object-contain w-40 h-44"
+                    className="object-contain w-50 h-44"
                   ></img>
                 </Link>
                 <Link to={`/items/${el.id}`}>

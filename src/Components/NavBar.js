@@ -44,7 +44,7 @@ export default function NavBar() {
   return (
     <nav className="flex justify-between items-center bg-slate-900 text-slate-100">
       <div>
-        <Link to="/items">
+        <Link to="/">
           <h1 className="font-signature text-5xl p-4 ml-2">Mariolle</h1>
         </Link>
       </div>
@@ -73,10 +73,10 @@ export default function NavBar() {
             <select className="block w-12 relative right-1 bottom-1.5 appearance-none bg-transparent hover:border-pink-500 px-2 py-2 rounded shadow-2xl leading-tight focus:outline-none focus:shadow-outline">
               <option value="">Sort</option>
               <option value="true" className="text-sm">
-                Favorite
+                Favs
               </option>
               <option value="false" className="text-sm">
-                Not favorite
+                Not favs
               </option>
             </select>
           </li>
@@ -113,7 +113,7 @@ export default function NavBar() {
       </div>
 
       {menu && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 right-0 w-2/3 h-screen bg-slate-900">
+        <ul className="flex flex-col justify-center items-center absolute top-0 right-0 w-full h-screen bg-slate-900">
           {/* //! The link is not working */}
           {/* {navLinks.map(({ id, name, path, icon }) => (
             <li
@@ -125,31 +125,37 @@ export default function NavBar() {
               <Link to="/items">{name}</Link>
             </li>
           ))} */}
-          <li className="px-5 text-gray-400 hover:text-pink-500">
+          <li className="px-5 py-4 text-gray-400 hover:text-pink-500">
             <Link to="/items">
               <HiOutlineHome />
               Home
             </Link>
           </li>
-          <li className="px-5 text-gray-400 hover:text-pink-500">
-            <Link to="/items/sort">
-              <BiCategory />
-              Sort
-            </Link>
+          <li className="px-5 py-4 text-gray-400 hover:text-pink-500">
+            <BiCategory />
+            <select className="block w-12 relative right-1 bottom-1.5 appearance-none bg-transparent hover:border-pink-500 px-2 py-2 rounded shadow-2xl leading-tight focus:outline-none focus:shadow-outline">
+              <option value="">Sort</option>
+              <option value="true" className="text-sm">
+                Favorite
+              </option>
+              <option value="false" className="text-sm">
+                Not favorite
+              </option>
+            </select>
           </li>
-          <li className="px-5 text-gray-400 hover:text-pink-500">
+          <li className="px-5 py-4 text-gray-400 hover:text-pink-500">
             <Link to="/items/wish">
               <RiShoppingBag3Line />
               wish
             </Link>
           </li>
-          <li className="px-5 text-gray-400 hover:text-pink-500">
+          <li className="px-5 py-4 text-gray-400 hover:text-pink-500">
             <Link to="/items/new">
               <TbHanger />
               New
             </Link>
           </li>
-          <li className="px-5 text-gray-400 hover:text-pink-500">
+          <li className="px-5 py-4 text-gray-400 hover:text-pink-500">
             <Link to="/items/cart">
               <HiOutlineShoppingCart />
               Cart

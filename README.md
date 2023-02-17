@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Getting Started with Mariolle
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created with [Create React App]
+To use this App refer to this code and follow instruction in the README [GitHub Repo](https://github.com/Fadila-Ali/PERN-portfolio-backend)
 
-## Available Scripts
+# Description
+Mariolle is an e-commerce app that allow user to sell and/or buy costumes. 
 
-In the project directory, you can run:
+## Instructions
+* `fork` and `clone` repo [GitHub Repo](https://github.com/Fadila-Ali/pern-portfolio-frontend)
 
-### `npm start`
+* `touch .env` from your terminal and add `REACT_APP_API_URL` plus `your localhost port number`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* `npm install` to install node packages
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* If `.gitignore` doesn't exist, than `touch .gitignore` and Don't forget to add your `.env` and `node_modules` in your `.gitignore`.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# User Story
+## On page load
+* The navigation bar gives the user many options such as - `Home`: take user to go to the home page,
+-`Category`: allows user to select a category to see,
+-`Wish`: shows user the items that were added to the wish list,
+-`New`: allows user to add a new item,
+-`Cart`: shows the user the items that were added to the shopping cart,
+-`Sign up`: allows the user to sign up (feature to be added)
 
-### `npm run build`
+* Home
+- user will see all inventory
+- user will see ads
+- user will see a footer that contain information about me (the developer), contact form, and quick links.
+- Light/Dark mode button
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Sort categories button
+- user can choose to see only favorite items, not favorite, or all items
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Wish button
+- user will see all the items they wish to buy later
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* New button 
+- user will a form and allows them to create a new item
 
-### `npm run eject`
+* Cart button
+- user will see all the items they added to the shopping cart
+- A button to take them back to the home page where they can continue shopping and a checkout button. The checkout button will only shows a modal that will thank the user since the App is not a real e-commerce App.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

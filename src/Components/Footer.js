@@ -4,35 +4,41 @@ import { FaGithubSquare } from "react-icons/fa";
 import { AiFillLinkedin } from "react-icons/ai";
 import { SiGmail } from "react-icons/si";
 import { BiSend } from "react-icons/bi";
+import { TbHanger } from "react-icons/tb";
+import { BiCategory } from "react-icons/bi";
+import { RiShoppingBag3Line } from "react-icons/ri";
+import { HiOutlineShoppingCart, HiOutlineHome } from "react-icons/hi";
 
 export default function Footer() {
-  const navLinks = [
-    {
-      id: 1,
-      name: "Home",
-      path: "/items",
-    },
-    {
-      id: 2,
-      name: "Sort",
-      path: "/items",
-    },
-    {
-      id: 3,
-      name: "Wish",
-      path: "/items",
-    },
-    {
-      id: 4,
-      name: "New",
-      path: "/items/new",
-    },
-    {
-      id: 5,
-      name: "Cart",
-      path: "/items",
-    },
-  ];
+
+    //! NOT WORKING 
+//   const navLinks = [
+//     {
+//       id: 1,
+//       name: "Home",
+//       path: "/items",
+//     },
+//     {
+//       id: 2,
+//       name: "Sort",
+//       path: "/items",
+//     },
+//     {
+//       id: 3,
+//       name: "Wish",
+//       path: "/items",
+//     },
+//     {
+//       id: 4,
+//       name: "New",
+//       path: "/items/new",
+//     },
+//     {
+//       id: 5,
+//       name: "Cart",
+//       path: "/items",
+//     },
+//   ];
   return (
     <div className="bg-slate-900 text-slate-100 p-2">
       <div className="lg:flex justify-between">
@@ -116,7 +122,7 @@ export default function Footer() {
         <div className="flex flex-col items-center p-2">
           <h3 className="font-bold pr-2">Quick Links:</h3>
           <ul className="text-gray-400">
-            {navLinks.map(({ id, name, path }) => (
+            {/* {navLinks.map(({ id, name, path }) => (
               <li
                 key={id}
                 path={path}
@@ -124,7 +130,27 @@ export default function Footer() {
               >
                 {name}
               </li>
-            ))}
+            ))} */}
+            <li className="px-5 py-2 text-gray-400 hover:text-pink-500">
+              <Link to="/items">
+                Home
+              </Link>
+            </li>
+            <li className="px-5 py-2 text-gray-400 hover:text-pink-500">
+              <Link to="/items/wish">
+                wish
+              </Link>
+            </li>
+            <li className="px-5 py-2 text-gray-400 hover:text-pink-500">
+              <Link to="/items/new">
+                New
+              </Link>
+            </li>
+            <li className="px-5 py-2 text-gray-400 hover:text-pink-500">
+              <Link to="/items/cart">
+                Cart
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

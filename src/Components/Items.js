@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { FcLikePlaceholder, FcLike } from "react-icons/fc";
 import { BiSearch } from "react-icons/bi";
+import { BsTrash } from "react-icons/bs";
 import Item from "./Item";
 
 const API = process.env.REACT_APP_API_URL;
@@ -20,6 +21,13 @@ export default function Items() {
       })
       .catch((c) => console.warn("catch, c"));
   }, []);
+
+  function handleDelete(id) {
+    const arr = [];
+    items.forEach((item) => {
+      arr.push(item.id);
+    });
+  }
   return (
     <div>
       <div className="flex justify-center">
@@ -28,8 +36,8 @@ export default function Items() {
           value={search}
           id="search"
           onChange={(event) => setSearch(event.target.value)}
-          placeholder="Enter name"
-          className="shadow-2xl bg-white text-slate-900 text-lg rounded-md w-2/5 py-3 px-4 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+          placeholder="Search costume"
+          className="shadow-2xl bg-white text-slate-900 text-lg rounded-md sm:w-3/5 lg:w-2/5 py-1 px-4 mb-3 leading-tight focus:outline-none focus:shadow-outline"
         />
         <button
           className="relative right-8 bottom-1 text-pink-500"
@@ -39,7 +47,7 @@ export default function Items() {
         </button>
       </div>
       {search ? (
-        <article className="sm:flex flex-wrap gap-2">
+        <article className="flex flex-wrap justify-center gap-2">
           {items
             .filter((item) => {
               if (search === "") {
@@ -90,6 +98,9 @@ export default function Items() {
                       ) : (
                         <FcLikePlaceholder className="inline text-2xl m-1" />
                       )}
+                      <button className="dark:text-slate-300">
+                        <BsTrash size={20} />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -97,7 +108,7 @@ export default function Items() {
             ))}
         </article>
       ) : (
-        <article className="sm:flex flex-wrap gap-2">
+        <article className="flex flex-wrap justify-center gap-2 min-w-sm">
           {items.map((item) => {
             return <Item key={item.id} item={item} />;
           })}

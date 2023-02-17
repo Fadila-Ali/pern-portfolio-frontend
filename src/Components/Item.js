@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FcLikePlaceholder, FcLike } from "react-icons/fc";
+import { BsTrash } from "react-icons/bs";
 
 export default function Item({ item }) {
   return (
@@ -39,6 +40,9 @@ export default function Item({ item }) {
             ) : (
               <FcLikePlaceholder className="inline text-2xl m-1" />
             )}
+            <button className="dark:text-slate-300">
+              <BsTrash size={20} />
+            </button>
           </div>
         </div>
       </div>
