@@ -70,16 +70,13 @@ export default function EditItem() {
           >
             Your are Editing this item
           </button>
-          <div className="w-2/5 m-auto">
+          <div className="sm:w-full lg:w-2/5 m-auto">
             <form
               className="bg-white text-slate-800 dark:text-slate-100 dark:bg-slate-900 shadow-md rounded px-10 pt-6 pb-8 mb-4"
               onSubmit={handleSubmit}
             >
               <div className="mb-4">
-                <label
-                  className="block text-sm font-bold mb-2"
-                  htmlFor="name"
-                >
+                <label className="block text-sm font-bold mb-2" htmlFor="name">
                   Name:
                 </label>
                 <input

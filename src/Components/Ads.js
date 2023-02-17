@@ -15,10 +15,10 @@ import Ad1 from "../assests/coming.png";
 import Ad2 from "../assests/witches.png";
 import Ad3 from "../assests/special.gif"
 import Ad4 from "../assests/hallo.png"
-import Ad5 from "../assests/babySheep.png"
+import Ad5 from "../assests/new.png"
 import Ad6 from "../assests/shipping.png"
 import Ad7 from "../assests/free.png"
-import Ad8 from "../assests/new.png"
+import Ad8 from "../assests/halloween.png"
 import Ad9 from "../assests/one.png"
 
 const arr = [
@@ -54,10 +54,10 @@ const arr = [
 
 export default function Ads() {
   return (
-    <div className="bg-pink-300 dark:bg-pink-400 m-4 p-4 rounded">
+    <div className="bg-pink-300 dark:bg-pink-400 mx-4 my-8 p-4 rounded">
       <Swiper
         modules={[Navigation, Pagination, A11y]}
-        spaceBetween={50}
+        spaceBetween={0}
         slidesPerView={2}
         navigation
         pagination={{ clickable: true }}

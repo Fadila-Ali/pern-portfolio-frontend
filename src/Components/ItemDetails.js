@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
-import { FcLikePlaceholder, FcLike } from "react-icons/fc";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { RiShoppingBag3Line } from "react-icons/ri";
 import { MdExposurePlus1 } from "react-icons/md";
 import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
@@ -104,11 +104,11 @@ export default function ItemDetails() {
             {item.is_favorite ? (
               <p className="">
                 <span>Favorite</span>
-                <FcLike className="inline text-5xl m-1" />
+                <FaHeart className="inline text-2xl m-1 text-red-500" />
               </p>
             ) : (
               <p>
-                <FcLikePlaceholder className="inline text-5xl m-1" />
+                <FaRegHeart className="inline text-2xl m-1 text-red-500" />
                 <span>click to make it a favorite!</span>
               </p>
             )}

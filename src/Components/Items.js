@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { FcLikePlaceholder, FcLike } from "react-icons/fc";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
 import { BsTrash } from "react-icons/bs";
 import Item from "./Item";
@@ -94,9 +94,9 @@ export default function Items() {
                         )}
                       </h6>
                       {item.is_favorite ? (
-                        <FcLike className="inline text-2xl m-1" />
+                        <FaHeart className="inline text-2xl m-1 text-red-500" />
                       ) : (
-                        <FcLikePlaceholder className="inline text-2xl m-1" />
+                        <FaRegHeart className="inline text-2xl m-1 text-red-500" />
                       )}
                       <button className="dark:text-slate-300">
                         <BsTrash size={20} />

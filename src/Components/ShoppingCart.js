@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate, Link, useParams } from "react-router-dom";
 import axios from "axios";
-import { FcLike, FcLikePlaceholder } from "react-icons/fc";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { BsTrash } from "react-icons/bs";
 
 const API = process.env.REACT_APP_API_URL;
@@ -113,9 +113,9 @@ export default function ShoppingCart() {
                       )}
                     </h6>
                     {item.is_favorite ? (
-                      <FcLike className="inline text-2xl m-1" />
+                      <FaHeart className="inline text-2xl m-1 text-red-500" />
                     ) : (
-                      <FcLikePlaceholder className="inline text-2xl m-1" />
+                      <FaRegHeart className="inline text-2xl m-1 text-red-500" />
                     )}
                     <button className="dark:text-slate-300">
                       <BsTrash size={20} onClick={removeFromCart} />
