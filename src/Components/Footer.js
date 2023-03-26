@@ -85,10 +85,9 @@ export default function Footer() {
         </div>
         <div>
           <h3 className="font-bold text-pink-500 p-1">
-            How was your experience using this App? Let's us know, so we can
-            improve!
+            How was your experience using this App?
           </h3>
-          <div className="flex flex-col p-2 justify-center mx-auto">
+          <div className="flex flex-col p-2 w-96 justify-center mx-auto">
             <form
               action="https://getform.io/f/21cdcb0c-8796-4bdc-9960-4bf1ad3b01a9"
               method="POST"
@@ -109,12 +108,12 @@ export default function Footer() {
               />
               <textarea
                 name="message"
-                rows="5"
+                rows="4"
                 placeholder="Your Thoughts..."
                 className="p-2 my-1 bg-transparent border-2 rounded-md text-gray-100 focus:outline-none"
               ></textarea>
               <button className="flex items-center font-bold rounded-md bg-white text-black py-2 px-4 my-2 mx-auto hover:scale-105 hover:bg-pink-500 duration-300">
-                Send <BiSend size={25} />
+                Send <BiSend size={20} />
               </button>
             </form>
           </div>
